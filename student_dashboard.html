@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Student Dashboard</h1>
+        <nav>
+            <button id="logoutButton">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <!-- Search Section -->
+        <h2>Search Books</h2>
+        <input type="text" id="searchQuery" placeholder="Search by title or author">
+        <button id="searchButton">Search</button>
+        <div id="searchResults"></div>
+
+        <!-- Borrowed Books Section -->
+        <h2>Borrowed Books</h2>
+        <div id="borrowedBooks"></div>
+
+        <!-- Reserve Book Section -->
+        <h2>Reserve Book</h2>
+        <input type="text" id="reserveBookTitle" placeholder="Book Title">
+        <button id="reserveButton">Reserve</button>
+
+        <!-- Notifications Section -->
+        <h2>Notifications</h2>
+        <div id="notificationList"></div>
+    </main>
+    <script src="scripts/student_dashboard.js"></script>
+</body>
+</html>

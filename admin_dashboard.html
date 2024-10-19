@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Admin Dashboard - Library Management System</title>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <button id="logoutButton">Logout</button>
+    </header>
+    
+    <main>
+        <section id="user-management">
+            <h2>User Management</h2>
+            <button id="viewUsers">View Users</button>
+            <div id="userList"></div> <!-- This should be present -->
+        </section>
+
+        <section id="catalog-management">
+            <h2>Catalog Management</h2>
+            <button id="viewCatalog">View Catalog</button>
+            <div id="catalogList"></div> <!-- This should be present -->
+
+            <!-- Form to add a book -->
+            <h3>Add a Book</h3>
+            <input type="text" id="bookTitle" placeholder="Book Title">
+            <input type="text" id="bookAuthor" placeholder="Book Author">
+            <button id="addBookButton">Add Book</button>
+        </section>
+
+        <section id="borrowed-books">
+            <h2>Borrowed Books</h2>
+            <div id="borrowedBooksList"></div>
+        </section>
+
+        <section id="statistics">
+            <h2>Statistics</h2>
+            <div id="circulationStats"></div> <!-- This should be present -->
+        </section>
+    </main>
+
+    <script src="scripts/userManagement.js"></script>
+    <script src="scripts/admin_dashboard.js"></script>
+</body>
+</html>

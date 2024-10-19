@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Catalog Management</title>
+</head>
+<body>
+    <header>
+        <h1>Catalog Management</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Add New Book</h2>
+        <form id="addBookForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            <label for="author">Author:</label>
+            <input type="text" id="author" required>
+            <button type="submit">Add Book</button>
+        </form>
+
+        <h2>Book List</h2>
+        <ul id="bookList"></ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+    <script src="scripts/catalogManagement.js"></script>
+    <script>
+        // Check user role and redirect if not admin
+        const role = localStorage.getItem('role');
+        if (role !== 'admin') {
+            alert('Access denied. You are not authorized to view this page.');
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
